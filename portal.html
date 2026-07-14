@@ -1,5 +1,4 @@
-
-         <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,7 +22,7 @@
 </head>
 <body class="bg-mintBg font-sans text-gray-800 min-h-screen flex flex-col justify-between">
 
-    <!-- Simple Header -->
+    <!-- Header -->
     <header class="bg-white text-emeraldGreen shadow-sm py-4 border-b border-emeraldGreen/10">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2 text-forestGreen font-bold text-sm">
@@ -33,74 +32,79 @@
         </div>
     </header>
 
-    <!-- Main Form & Payment Wrapper -->
+    <!-- Main Booking Form -->
     <main class="container mx-auto px-4 py-8 max-w-xl flex-grow">
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 space-y-6">
             
             <div class="text-center space-y-1">
                 <h2 class="text-xl font-extrabold text-forestGreen">Confirm Registration</h2>
-                <p class="text-xs text-gray-500">Please provide your details and secure your appointment slot.</p>
+                <p class="text-xs text-gray-500">Provide your information, secure your slot via payment, and submit via WhatsApp.</p>
             </div>
 
             <!-- Patient Details Form -->
-            <form id="bookingForm" class="space-y-4">
+            <form id="bookingForm" class="space-y-5">
+                <!-- Patient Name -->
                 <div>
                     <label class="block text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">Patient Full Name</label>
-                    <input type="text" required placeholder="Enter full name" class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen">
+                    <input type="text" id="patientName" required placeholder="Enter full name" class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen">
                 </div>
                 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">Phone Number</label>
-                        <input type="tel" required placeholder="10-digit number" class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen">
-                    </div>
+                <!-- Phone Number -->
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">Phone Number</label>
+                    <input type="tel" id="patientPhone" required placeholder="10-digit mobile number" class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen">
+                </div>
+
+                <!-- Date & Timing Slots -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">Preferred Date</label>
-                        <input type="date" required class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen">
+                        <input type="date" id="bookingDate" required class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">Preferred Timing Slot</label>
+                        <select id="bookingSlot" required class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen text-gray-700">
+                            <option value="" disabled selected>Select a timing window</option>
+                            <option value="Morning Slot (10:00 AM - 1:00 PM)">☀️ Morning Slot (10:00 AM - 1:00 PM)</option>
+                            <option value="Evening Slot (5:00 PM - 8:00 PM)">🌙 Evening Slot (5:00 PM - 8:00 PM)</option>
+                        </select>
                     </div>
                 </div>
 
-                <!-- Step-down Payment Alert -->
-                <div class="bg-mintBg p-4 rounded-xl border border-emeraldGreen/10 space-y-3">
+                <!-- Step-down Interactive Payment Area -->
+                <div class="bg-mintBg p-4 rounded-xl border border-emeraldGreen/10 space-y-4">
                     <div class="flex items-center justify-between text-xs font-bold text-forestGreen">
-                        <span>Registration Fee:</span>
+                        <span>Clinic Registration Deposit:</span>
                         <span class="text-sm text-emeraldGreen">₹300</span>
                     </div>
-                    <p class="text-[10px] text-gray-500 leading-relaxed">
-                        To lock your slot in the clinic schedule, please complete the ₹300 registration deposit using either option below.
-                    </p>
 
-                    <!-- QR Code / Payment Area -->
-                    <div class="bg-white p-4 rounded-xl border border-gray-100 flex flex-col items-center justify-center space-y-4">
-                        <!-- Placeholder for QR Code Image -->
-                        <div class="w-36 h-36 bg-gray-100 rounded-lg flex items-center justify-center border border-dashed border-gray-300 relative overflow-hidden" id="qrPlaceholder">
-                            <span class="text-[10px] text-gray-400 text-center px-4">[ Drop/Link your Clinic QR Code Image Here ]</span>
+                    <!-- Visual QR Code Box (Retained) -->
+                    <div class="bg-white p-4 rounded-xl border border-gray-100 flex flex-col items-center justify-center">
+                        <div class="w-40 h-40 bg-gray-50 rounded-lg flex items-center justify-center border border-dashed border-gray-300 relative overflow-hidden" id="qrPlaceholder">
+                            <span class="text-[10px] text-gray-400 text-center px-4">[ Scan QR Code Here ]</span>
                         </div>
+                        <p class="text-[9px] text-gray-400 mt-2 text-center">Scan this QR or use the direct tap-to-pay button below.</p>
+                    </div>
 
-                        <div class="text-center w-full">
-                            <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-2">— OR CLICK TO PAY DIRECTLY —</span>
-                            
-                            <!-- Deep-linked UPI Payment Button -->
-                            <a href="upi://pay?pa=8961389072@okbizaxis&pn=Kalpataru%20Clinic&am=300&cu=INR" class="inline-flex items-center justify-center gap-2 w-full bg-emeraldGreen text-white text-xs font-bold py-3 px-4 rounded-xl hover:bg-forestGreen transition shadow active:scale-98">
-                                ⚡ Tap to Pay via Any UPI App
-                            </a>
-                            
-                            <span class="block text-[10px] font-mono text-gray-600 mt-2 select-all bg-mintBg py-1 rounded border border-gray-100">
-                                UPI ID: 8961389072@okbizaxis
-                            </span>
+                    <!-- Live Deep-linked Clickable UPI Action -->
+                    <div class="text-center w-full space-y-2">
+                        <a href="upi://pay?pa=8961389072@okbizaxis&pn=Kalpataru%20Clinic&am=300&cu=INR" class="inline-flex items-center justify-center gap-2 w-full bg-emeraldGreen text-white text-xs font-bold py-3 px-4 rounded-xl hover:bg-forestGreen transition shadow active:scale-98">
+                            ⚡ Tap to Pay via Any UPI App (₹300)
+                        </a>
+                        <div class="text-[10px] font-mono text-gray-600 bg-white/60 py-1 rounded border border-gray-100 select-all">
+                            UPI ID: 8961389072@okbizaxis
                         </div>
                     </div>
                 </div>
 
-                <!-- Transaction Proof Field -->
-                <div>
-                    <label class="block text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">Transaction ID / Ref No.</label>
-                    <input type="text" required placeholder="Enter the 12-digit UPI Ref Number" class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen">
-                    <span class="text-[9px] text-gray-400 block mt-1">Please enter the reference number from your payment app screen to verify deposit.</span>
+                <!-- Guidelines Notice -->
+                <div class="bg-amber-50 text-amber-900 text-[10px] p-3 rounded-xl border border-amber-200 leading-relaxed">
+                    ⚠️ <strong>Next Step Instructions:</strong> After executing your ₹300 payment, tap the button below. The website will bundle your data and open WhatsApp. **Please attach your payment screenshot in the chat** to confirm your slot.
                 </div>
 
-                <button type="submit" class="w-full bg-softGold text-forestGreen font-bold text-xs py-3.5 rounded-xl hover:bg-yellow-500 transition shadow-md uppercase tracking-wider">
-                    Submit Booking Request
+                <!-- WhatsApp Automator Action Button -->
+                <button type="submit" class="w-full bg-softGold text-forestGreen font-black text-xs py-4 rounded-xl hover:bg-yellow-500 transition shadow-md uppercase tracking-wider flex items-center justify-center gap-2">
+                    💬 Send Details & Confirm on WhatsApp
                 </button>
             </form>
         </div>
@@ -108,15 +112,35 @@
 
     <!-- Footer -->
     <footer class="bg-forestGreen text-gray-500 py-6 text-center text-[10px] border-t border-white/5">
-        © 2026 Kalpataru Clinic. Secure Digital Registration Gateway.
+        © 2026 Kalpataru Clinic. Booking Authorization Node.
     </footer>
 
+    <!-- Booking Data Capture & Direct WhatsApp Message Dispatch -->
     <script>
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you! Your deposit reference has been submitted. The clinic manager will confirm your slot via SMS/WhatsApp shortly.');
+            
+            // Extract accurate patient dataset
+            const name = document.getElementById('patientName').value.trim();
+            const phone = document.getElementById('patientPhone').value.trim();
+            const date = document.getElementById('bookingDate').value;
+            const slot = document.getElementById('bookingSlot').value;
+            
+            // Format highly readable structure for the practitioner's WhatsApp panel
+            const messageText = `Hello Kalpataru Clinic,\n\nI have completed the booking payment. Here are my registration details:\n\n• Name: ${name}\n• Phone: ${phone}\n• Date: ${date}\n• Preferred Slot: ${slot}\n\n[Attaching payment screenshot below for verification]`;
+            
+            // Encode text for web-safe URL usage
+            const encodedMessage = encodeURIComponent(messageText);
+            
+            // Official clinic consultation landing anchor 
+            const whatsappNumber = "919477401990";
+            
+            // Generate deep link structure
+            const targetURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            // Auto-redirect patient context safely
+            window.open(targetURL, '_blank');
         });
     </script>
 </body>
 </html>
-

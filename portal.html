@@ -55,7 +55,7 @@
                     <input type="tel" id="patientPhone" required placeholder="10-digit mobile number" class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen">
                 </div>
 
-                <!-- Date & Timing Slots -->
+                <!-- Date & Timing Slots (Simplified) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">Preferred Date</label>
@@ -65,8 +65,8 @@
                         <label class="block text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">Preferred Timing Slot</label>
                         <select id="bookingSlot" required class="w-full p-3 text-xs rounded-xl border border-gray-200 bg-mintBg/30 outline-none focus:border-emeraldGreen text-gray-700">
                             <option value="" disabled selected>Select a timing window</option>
-                            <option value="Morning Slot (10:00 AM - 1:00 PM)">☀️ Morning Slot (10:00 AM - 1:00 PM)</option>
-                            <option value="Evening Slot (5:00 PM - 8:00 PM)">🌙 Evening Slot (5:00 PM - 8:00 PM)</option>
+                            <option value="Morning Slot">☀️ Morning Slot</option>
+                            <option value="Evening Slot">🌙 Evening Slot</option>
                         </select>
                     </div>
                 </div>
@@ -76,14 +76,6 @@
                     <div class="flex items-center justify-between text-xs font-bold text-forestGreen">
                         <span>Clinic Registration Deposit:</span>
                         <span class="text-sm text-emeraldGreen">₹300</span>
-                    </div>
-
-                    <!-- Visual QR Code Box (Retained) -->
-                    <div class="bg-white p-4 rounded-xl border border-gray-100 flex flex-col items-center justify-center">
-                        <div class="w-40 h-40 bg-gray-50 rounded-lg flex items-center justify-center border border-dashed border-gray-300 relative overflow-hidden" id="qrPlaceholder">
-                            <span class="text-[10px] text-gray-400 text-center px-4">[ Scan QR Code Here ]</span>
-                        </div>
-                        <p class="text-[9px] text-gray-400 mt-2 text-center">Scan this QR or use the direct tap-to-pay button below.</p>
                     </div>
 
                     <!-- Live Deep-linked Clickable UPI Action -->

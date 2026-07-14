@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalpataru Advanced Homoeopathy Clinic</title>
+    <!-- Tailwind CSS for modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,58 +12,139 @@
                 extend: {
                     colors: {
                         emeraldGreen: '#0F5132',
+                        forestGreen: '#0A3621',
                         softGold: '#D4AF37',
-                        lightBg: '#F8F9FA',
+                        mintBg: '#F4F7F5',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-lightBg font-sans text-gray-800">
+<body class="bg-mintBg font-sans text-gray-800">
 
-    <header class="bg-emeraldGreen text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Premium Header -->
+    <header class="bg-white/90 backdrop-blur-md text-emeraldGreen shadow-sm sticky top-0 z-50 border-b border-emeraldGreen/10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-softGold rounded-full flex items-center justify-center font-bold text-emeraldGreen">K</div>
+                <div class="w-10 h-10 bg-emeraldGreen rounded-xl flex items-center justify-center font-bold text-softGold shadow-md">K</div>
                 <div>
-                    <h1 class="text-lg font-bold leading-none">Kalpataru</h1>
-                    <span class="text-xs text-gray-300">Advanced Homoeopathy Clinic</span>
+                    <h1 class="text-base font-extrabold leading-none text-forestGreen tracking-wide uppercase">Kalpataru</h1>
+                    <span class="text-[10px] text-emeraldGreen/80 tracking-wider">Advanced Homoeopathy</span>
                 </div>
             </div>
-            <nav class="flex space-x-4 text-sm font-medium">
-                <a href="portal.html" class="bg-softGold text-emeraldGreen px-3 py-1.5 rounded-lg font-bold hover:bg-yellow-500 transition">Patient Portal</a>
-            </nav>
+            <a href="portal.html" class="bg-emeraldGreen text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-forestGreen transition shadow-md shadow-emeraldGreen/10">
+                Patient Portal
+            </a>
         </div>
     </header>
 
-    <section class="bg-gradient-to-br from-emeraldGreen to-green-900 text-white py-16 px-4 text-center">
-        <div class="container mx-auto max-w-2xl space-y-6">
-            <span class="bg-green-800 text-softGold border border-softGold px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Expert Holistic Care</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Restore Your Health Naturally</h2>
-            <p class="text-gray-200 text-md">Personalized clinical homoeopathic treatments targeting chronic conditions and long-term wellness under <strong>Dr. Saumodeep Paul</strong>.</p>
-            <div class="flex flex-col gap-3 max-w-xs mx-auto">
-                <a href="portal.html" class="bg-softGold text-emeraldGreen text-center px-6 py-3 rounded-xl font-bold text-md hover:bg-yellow-500 transition shadow-lg">Book Instant Appointment</a>
-                <a href="https://wa.me/919876543210" target="_blank" class="bg-white text-emeraldGreen border border-emeraldGreen text-center px-6 py-3 rounded-xl font-bold text-md hover:bg-gray-100 transition shadow-md flex items-center justify-center gap-2">
-                    💬 Chat on WhatsApp
+    <!-- Beautiful Hero Section -->
+    <section class="bg-gradient-to-br from-forestGreen via-emeraldGreen to-green-950 text-white py-16 px-6 text-center relative overflow-hidden">
+        <!-- Abstract Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-softGold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="container mx-auto max-w-2xl relative z-10 space-y-6">
+            <span class="inline-flex items-center gap-1.5 bg-white/10 text-softGold border border-softGold/30 px-3 py-1 rounded-full text-xs font-semibold tracking-wider">
+                ✨ Traditional Healing, Advanced Care
+            </span>
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                Gentle, Permanent & <br><span class="text-softGold">Natural Recovery</span>
+            </h2>
+            <p class="text-gray-200 text-sm md:text-base leading-relaxed max-w-lg mx-auto">
+                Consult with <strong>Dr. Saumodeep Paul</strong> for personalized homoeopathic treatments addressing the root causes of chronic illness, pediatrics, and skin conditions.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4">
+                <a href="portal.html" class="w-full sm:w-auto bg-softGold text-forestGreen text-center px-6 py-3.5 rounded-xl font-bold text-sm hover:bg-yellow-500 transition shadow-lg shadow-yellow-500/20">
+                    Book Appointment Online
+                </a>
+                <a href="https://wa.me/919876543210" target="_blank" class="w-full sm:w-auto bg-white/10 border border-white/20 text-center px-6 py-3.5 rounded-xl font-bold text-sm hover:bg-white/20 transition flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 text-green-400 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.588 1.978 14.131 1.95 12.012 1.95c-5.439 0-9.864 4.373-9.868 9.8.001 1.714.463 3.39 1.337 4.888L2.5 21.5l4.147-1.346z"/></svg>
+                    Consult on WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="py-12 px-4">
-        <div class="container mx-auto max-w-xl text-center space-y-6">
-            <h3 class="text-2xl font-bold text-emeraldGreen">Meet Dr. Saumodeep Paul</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">With years of clinical excellence in advanced homoeopathy, Dr. Paul approaches patient care from an individualized, holistic perspective. Our clinic specializes in safe, non-invasive treatments for respiratory, digestive, skin, and pediatric challenges, providing long-term relief without side effects.</p>
+    <!-- Interactive Clinical Services Grid -->
+    <section class="py-16 px-6 container mx-auto max-w-4xl">
+        <div class="text-center space-y-2 mb-10">
+            <h3 class="text-2xl font-extrabold text-forestGreen">Specialized Clinical Care</h3>
+            <p class="text-xs text-gray-500">Treating conditions gently with individual analysis and side-effect free remedies.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 hover:shadow-md transition">
+                <div class="w-10 h-10 bg-emeraldGreen/10 rounded-xl flex items-center justify-center text-emeraldGreen mb-4">
+                    🩺
+                </div>
+                <h4 class="font-bold text-forestGreen text-md">Chronic Diseases</h4>
+                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Deep-acting constitutional therapy for stubborn, long-standing complaints like arthritis, migraine, and gastric issues.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 hover:shadow-md transition">
+                <div class="w-10 h-10 bg-emeraldGreen/10 rounded-xl flex items-center justify-center text-emeraldGreen mb-4">
+                    🍃
+                </div>
+                <h4 class="font-bold text-forestGreen text-md">Skin & Allergies</h4>
+                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Natural relief for eczema, psoriasis, acne, and recurring respiratory allergies by correcting underlying immune balances.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 hover:shadow-md transition">
+                <div class="w-10 h-10 bg-emeraldGreen/10 rounded-xl flex items-center justify-center text-emeraldGreen mb-4">
+                    👶
+                </div>
+                <h4 class="font-bold text-forestGreen text-md">Pediatric Care</h4>
+                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Super safe, sweet pills to naturally build immunity in children struggling with cold, cough, tonsillitis, and poor appetite.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 hover:shadow-md transition">
+                <div class="w-10 h-10 bg-emeraldGreen/10 rounded-xl flex items-center justify-center text-emeraldGreen mb-4">
+                    🧠
+                </div>
+                <h4 class="font-bold text-forestGreen text-md">Mind & Lifestyle</h4>
+                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Holistic addressing of modern challenges including stress, insomnia, anxiety, and metabolic lifestyle disorders.</p>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-6 text-center border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p class="text-xs">© 2026 Kalpataru Advanced Homoeopathy Clinic. All Rights Reserved.</p>
-            <p class="text-[10px] mt-1 text-gray-600">Our medical advice and treatments are administered under the professional care of Dr. Saumodeep Paul.</p>
+    <!-- Doctor Section -->
+    <section class="bg-white py-16 px-6 border-y border-emeraldGreen/5">
+        <div class="container mx-auto max-w-3xl flex flex-col md:flex-row items-center gap-8">
+            <div class="w-48 h-48 bg-gradient-to-br from-emeraldGreen to-forestGreen rounded-3xl flex items-center justify-center shadow-lg relative overflow-hidden flex-shrink-0">
+                <span class="text-6xl">👨‍⚕️</span>
+            </div>
+            <div class="space-y-4 text-center md:text-left">
+                <h3 class="text-2xl font-extrabold text-forestGreen">About Dr. Saumodeep Paul</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Dr. Saumodeep Paul believes that true health is more than just the absence of disease. With extensive clinical experience in advanced homoeopathic medicine, he combines classical concepts with modern medical diagnosis to provide precise remedies tailored to each unique individual.
+                </p>
+                <div class="flex items-center justify-center md:justify-start space-x-6 text-xs text-emeraldGreen font-semibold">
+                    <span>✓ Certified Practitioner</span>
+                    <span>✓ Safe For Children</span>
+                    <span>✓ Root-Cause Focus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elegant Footer -->
+    <footer class="bg-forestGreen text-gray-400 py-10 text-center border-t border-softGold/20">
+        <div class="container mx-auto px-6 max-w-2xl space-y-4">
+            <p class="text-sm text-gray-300">🌿 Kalpataru Advanced Homoeopathy Clinic</p>
+            <p class="text-[11px] text-gray-500 leading-relaxed">
+                Our treatments and consults are supervised under the direct, physical care of Dr. Paul. Always consult a physician before making major healthcare decisions.
+            </p>
+            <div class="border-t border-white/10 pt-4 text-[10px]">
+                © 2026 Kalpataru Clinic. Hosting provided completely free by GitHub.
+            </div>
         </div>
     </footer>
 
 </body>
 </html>
+

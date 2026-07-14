@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalpataru Advanced Homoeopathy Clinic</title>
-    <!-- Tailwind CSS for modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,7 +22,7 @@
 </head>
 <body class="bg-mintBg font-sans text-gray-800">
 
-    <!-- Premium Header -->
+    <!-- Premium Navigation with Social Links -->
     <header class="bg-white/90 backdrop-blur-md text-emeraldGreen shadow-sm sticky top-0 z-50 border-b border-emeraldGreen/10">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -33,118 +32,191 @@
                     <span class="text-[10px] text-emeraldGreen/80 tracking-wider">Advanced Homoeopathy</span>
                 </div>
             </div>
-            <a href="portal.html" class="bg-emeraldGreen text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-forestGreen transition shadow-md shadow-emeraldGreen/10">
-                Patient Portal
-            </a>
+            
+            <!-- Header Quick Actions -->
+            <div class="flex items-center space-x-3">
+                <!-- Mobile Social Shortcuts -->
+                <div class="flex items-center space-x-2 mr-1">
+                    <a href="https://google.com" target="_blank" title="Google Business Profile" class="text-gray-500 hover:text-emeraldGreen text-lg">🌐</a>
+                    <a href="https://facebook.com" target="_blank" title="Facebook Page" class="text-gray-500 hover:text-emeraldGreen text-lg">📘</a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram ID" class="text-gray-500 hover:text-emeraldGreen text-lg">📸</a>
+                </div>
+                <a href="portal.html" class="bg-emeraldGreen text-white px-3 py-2 rounded-xl text-xs font-bold hover:bg-forestGreen transition shadow-md">
+                    Book Now
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Beautiful Hero Section -->
-    <section class="bg-gradient-to-br from-forestGreen via-emeraldGreen to-green-950 text-white py-16 px-6 text-center relative overflow-hidden">
-        <!-- Abstract Background Glow -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-softGold/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="container mx-auto max-w-2xl relative z-10 space-y-6">
-            <span class="inline-flex items-center gap-1.5 bg-white/10 text-softGold border border-softGold/30 px-3 py-1 rounded-full text-xs font-semibold tracking-wider">
-                ✨ Traditional Healing, Advanced Care
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-forestGreen via-emeraldGreen to-green-950 text-white py-14 px-6 text-center relative">
+        <div class="container mx-auto max-w-2xl relative z-10 space-y-4">
+            <span class="inline-flex items-center bg-white/10 text-softGold border border-softGold/30 px-3 py-1 rounded-full text-xs font-semibold tracking-wider">
+                🌿 Holistic Root-Cause Healing
             </span>
             <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                Gentle, Permanent & <br><span class="text-softGold">Natural Recovery</span>
+                Advanced Homoeopathic <br><span class="text-softGold">Clinical Care</span>
             </h2>
-            <p class="text-gray-200 text-sm md:text-base leading-relaxed max-w-lg mx-auto">
-                Consult with <strong>Dr. Saumodeep Paul</strong> for personalized homoeopathic treatments addressing the root causes of chronic illness, pediatrics, and skin conditions.
+            <p class="text-gray-200 text-sm max-w-lg mx-auto">
+                Personalized constitutional treatments designed by <strong>Dr. Saumodeep Paul</strong> to safely restore long-term health and immunity.
             </p>
-            <div class="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4">
-                <a href="portal.html" class="w-full sm:w-auto bg-softGold text-forestGreen text-center px-6 py-3.5 rounded-xl font-bold text-sm hover:bg-yellow-500 transition shadow-lg shadow-yellow-500/20">
+            <div class="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2">
+                <a href="portal.html" class="w-full sm:w-auto bg-softGold text-forestGreen text-center px-6 py-3 rounded-xl font-bold text-sm hover:bg-yellow-500 transition shadow-lg">
                     Book Appointment Online
                 </a>
-                <a href="https://wa.me/919876543210" target="_blank" class="w-full sm:w-auto bg-white/10 border border-white/20 text-center px-6 py-3.5 rounded-xl font-bold text-sm hover:bg-white/20 transition flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4 text-green-400 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.588 1.978 14.131 1.95 12.012 1.95c-5.439 0-9.864 4.373-9.868 9.8.001 1.714.463 3.39 1.337 4.888L2.5 21.5l4.147-1.346z"/></svg>
-                    Consult on WhatsApp
+                <a href="https://wa.me/919876543210" target="_blank" class="w-full sm:w-auto bg-white/10 border border-white/20 text-center px-6 py-3 rounded-xl font-bold text-sm hover:bg-white/20 transition flex items-center justify-center gap-2">
+                    💬 WhatsApp Consultation
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Clinical Services Grid -->
-    <section class="py-16 px-6 container mx-auto max-w-4xl">
-        <div class="text-center space-y-2 mb-10">
-            <h3 class="text-2xl font-extrabold text-forestGreen">Specialized Clinical Care</h3>
-            <p class="text-xs text-gray-500">Treating conditions gently with individual analysis and side-effect free remedies.</p>
+    <!-- Treatment Modules -->
+    <section class="py-12 px-6 container mx-auto max-w-4xl">
+        <div class="text-center space-y-2 mb-8">
+            <h3 class="text-2xl font-extrabold text-forestGreen">Our Treatment Modules</h3>
+            <p class="text-xs text-gray-500">Specialized clinical areas targeting safe recovery across all age groups.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 hover:shadow-md transition">
-                <div class="w-10 h-10 bg-emeraldGreen/10 rounded-xl flex items-center justify-center text-emeraldGreen mb-4">
-                    🩺
+            <!-- Chronic Conditions -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="text-2xl">🩺</span>
+                    <h4 class="font-bold text-forestGreen text-base">Chronic Disease Management</h4>
                 </div>
-                <h4 class="font-bold text-forestGreen text-md">Chronic Diseases</h4>
-                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Deep-acting constitutional therapy for stubborn, long-standing complaints like arthritis, migraine, and gastric issues.</p>
+                <p class="text-xs text-gray-600 leading-relaxed mb-3">Deep individual analysis mapping physical, lifestyle, and inherited constitutional patterns to address root triggers.</p>
+                <ul class="text-[11px] text-emeraldGreen font-medium space-y-1 bg-mintBg p-3 rounded-xl">
+                    <li>• Gastrointestinal Disorders & IBS</li>
+                    <li>• Migraine & Chronic Headaches</li>
+                    <li>• Rheumatitis & Joint Inflammations</li>
+                    <li>• Stubborn Respiratory Allergies</li>
+                </ul>
             </div>
 
-            <!-- Card 2 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 hover:shadow-md transition">
-                <div class="w-10 h-10 bg-emeraldGreen/10 rounded-xl flex items-center justify-center text-emeraldGreen mb-4">
-                    🍃
+            <!-- Pediatric Module -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="text-2xl">👶</span>
+                    <h4 class="font-bold text-forestGreen text-base">Pediatric & Child Immunity</h4>
                 </div>
-                <h4 class="font-bold text-forestGreen text-md">Skin & Allergies</h4>
-                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Natural relief for eczema, psoriasis, acne, and recurring respiratory allergies by correcting underlying immune balances.</p>
+                <p class="text-xs text-gray-600 leading-relaxed mb-3">Highly safe, non-invasive, sweet pills formulated to stimulate natural body defenses without side effects.</p>
+                <ul class="text-[11px] text-emeraldGreen font-medium space-y-1 bg-mintBg p-3 rounded-xl">
+                    <li>• Recurrent Cold, Cough & Tonsillitis</li>
+                    <li>• Childhood Eczema & Skin Rashes</li>
+                    <li>• Appetite & Digestion Enhancement</li>
+                    <li>• Growth & Immunity Stabilization</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Patient Utilities -->
+    <section class="py-12 px-6 bg-white border-y border-emeraldGreen/5">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center space-y-2 mb-8">
+                <h3 class="text-2xl font-extrabold text-forestGreen">Patient Wellness Utilities</h3>
+                <p class="text-xs text-gray-500">Free digital tools to track your daily health alongside your treatment plan.</p>
             </div>
 
-            <!-- Card 3 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 hover:shadow-md transition">
-                <div class="w-10 h-10 bg-emeraldGreen/10 rounded-xl flex items-center justify-center text-emeraldGreen mb-4">
-                    👶
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- BMI Calculator -->
+                <div class="bg-mintBg p-6 rounded-2xl border border-emeraldGreen/10 space-y-3">
+                    <h4 class="font-bold text-forestGreen text-sm flex items-center gap-2">📊 Clinical BMI Calculator</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[10px] font-bold text-gray-600 mb-1">Weight (kg)</label>
+                            <input type="number" id="bmiWeight" placeholder="e.g. 70" class="w-full p-2 text-xs rounded-lg border bg-white outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-gray-600 mb-1">Height (cm)</label>
+                            <input type="number" id="bmiHeight" placeholder="e.g. 170" class="w-full p-2 text-xs rounded-lg border bg-white outline-none">
+                        </div>
+                    </div>
+                    <button onclick="calculateWebBMI()" class="w-full bg-emeraldGreen text-white text-xs font-bold py-2 rounded-lg hover:bg-forestGreen">Calculate Score</button>
+                    <div id="bmiResult" class="text-center font-bold text-xs text-forestGreen bg-white/60 py-2 rounded-lg hidden"></div>
                 </div>
-                <h4 class="font-bold text-forestGreen text-md">Pediatric Care</h4>
-                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Super safe, sweet pills to naturally build immunity in children struggling with cold, cough, tonsillitis, and poor appetite.</p>
-            </div>
 
-            <!-- Card 4 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-emeraldGreen/5 hover:shadow-md transition">
-                <div class="w-10 h-10 bg-emeraldGreen/10 rounded-xl flex items-center justify-center text-emeraldGreen mb-4">
-                    🧠
+                <!-- Water Tracker -->
+                <div class="bg-mintBg p-6 rounded-2xl border border-emeraldGreen/10 space-y-3 flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-bold text-forestGreen text-sm flex items-center gap-2">💧 Daily Hydration Tracker</h4>
+                        <p class="text-[11px] text-gray-500 mt-1">Keep track of your water intake to clear toxins during homoeopathic treatments.</p>
+                        <div class="text-center py-3">
+                            <span class="text-2xl font-black text-emeraldGreen" id="waterCount">0</span>
+                            <span class="text-xs text-gray-500"> / 8 Glasses today</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="addGlass(1)" class="flex-1 bg-emeraldGreen text-white text-xs font-bold py-2 rounded-lg">+ Add Glass</button>
+                        <button onclick="addGlass(-1)" class="bg-gray-200 text-gray-700 text-xs px-3 py-2 rounded-lg">Reset</button>
+                    </div>
                 </div>
-                <h4 class="font-bold text-forestGreen text-md">Mind & Lifestyle</h4>
-                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Holistic addressing of modern challenges including stress, insomnia, anxiety, and metabolic lifestyle disorders.</p>
             </div>
         </div>
     </section>
 
     <!-- Doctor Section -->
-    <section class="bg-white py-16 px-6 border-y border-emeraldGreen/5">
-        <div class="container mx-auto max-w-3xl flex flex-col md:flex-row items-center gap-8">
-            <div class="w-48 h-48 bg-gradient-to-br from-emeraldGreen to-forestGreen rounded-3xl flex items-center justify-center shadow-lg relative overflow-hidden flex-shrink-0">
-                <span class="text-6xl">👨‍⚕️</span>
-            </div>
-            <div class="space-y-4 text-center md:text-left">
-                <h3 class="text-2xl font-extrabold text-forestGreen">About Dr. Saumodeep Paul</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Dr. Saumodeep Paul believes that true health is more than just the absence of disease. With extensive clinical experience in advanced homoeopathic medicine, he combines classical concepts with modern medical diagnosis to provide precise remedies tailored to each unique individual.
-                </p>
-                <div class="flex items-center justify-center md:justify-start space-x-6 text-xs text-emeraldGreen font-semibold">
-                    <span>✓ Certified Practitioner</span>
-                    <span>✓ Safe For Children</span>
-                    <span>✓ Root-Cause Focus</span>
-                </div>
-            </div>
+    <section class="py-12 px-6 container mx-auto max-w-3xl flex flex-col md:flex-row items-center gap-6">
+        <div class="w-36 h-36 bg-emeraldGreen rounded-3xl flex items-center justify-center text-5xl shadow-md flex-shrink-0">👨‍⚕️</div>
+        <div class="space-y-3 text-center md:text-left">
+            <h3 class="text-xl font-extrabold text-forestGreen">About Dr. Saumodeep Paul</h3>
+            <p class="text-gray-600 text-xs leading-relaxed">
+                Combining traditional homoeopathic philosophy with modern diagnostic perspectives, Dr. Paul aims to find safe, long-lasting clinical relief tailored precisely to your biological framework.
+            </p>
         </div>
     </section>
 
-    <!-- Elegant Footer -->
-    <footer class="bg-forestGreen text-gray-400 py-10 text-center border-t border-softGold/20">
-        <div class="container mx-auto px-6 max-w-2xl space-y-4">
-            <p class="text-sm text-gray-300">🌿 Kalpataru Advanced Homoeopathy Clinic</p>
-            <p class="text-[11px] text-gray-500 leading-relaxed">
-                Our treatments and consults are supervised under the direct, physical care of Dr. Paul. Always consult a physician before making major healthcare decisions.
-            </p>
+    <!-- Footer with Social Media Connections -->
+    <footer class="bg-forestGreen text-gray-400 py-10 text-center">
+        <div class="container mx-auto px-6 max-w-xl text-[11px] space-y-4">
+            <p class="text-gray-300 text-sm">🌿 Kalpataru Advanced Homoeopathy Clinic</p>
+            
+            <!-- Social Media Buttons -->
+            <div class="flex justify-center space-x-4 py-2">
+                <a href="https://google.com" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition">
+                    <span>🌐</span> Google Review
+                </a>
+                <a href="https://facebook.com" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition">
+                    <span>📘</span> Facebook
+                </a>
+                <a href="https://instagram.com" target="_blank" class="bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition">
+                    <span>📸</span> Instagram
+                </a>
+            </div>
+
+            <p class="text-gray-500">Appointments are secured with a formal ₹300 clinical registration deposit via standard digital UPI pathways.</p>
             <div class="border-t border-white/10 pt-4 text-[10px]">
                 © 2026 Kalpataru Clinic. Hosting provided completely free by GitHub.
             </div>
         </div>
     </footer>
 
+    <!-- Interactive Logic -->
+    <script>
+        function calculateWebBMI() {
+            const w = parseFloat(document.getElementById('bmiWeight').value);
+            const h = parseFloat(document.getElementById('bmiHeight').value) / 100;
+            if(w > 0 && h > 0) {
+                const bmi = (w / (h * h)).toFixed(1);
+                let status = "Normal";
+                if(bmi < 18.5) status = "Underweight";
+                else if(bmi >= 25) status = "Overweight";
+                
+                const res = document.getElementById('bmiResult');
+                res.innerText = `Your BMI is ${bmi} (${status})`;
+                res.classList.remove('hidden');
+            }
+        }
+
+        let glasses = 0;
+        function addGlass(val) {
+            if(val === -1) glasses = 0;
+            else glasses = Math.min(glasses + 1, 12);
+            document.getElementById('waterCount').innerText = glasses;
+        }
+    </script>
 </body>
-</html>
+    </html>
+
 
